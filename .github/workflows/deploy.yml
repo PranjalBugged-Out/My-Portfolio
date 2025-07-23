@@ -32,6 +32,11 @@ jobs:
 
       - name: Build 🔧
         run: npm run build:vercel
+        
+      - name: Ensure .nojekyll exists
+        run: |
+          touch ./out/.nojekyll
+          ls -la ./out/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

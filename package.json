@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:vercel": "cross-env NEXT_DISABLE_ESLINT=1 NEXT_DISABLE_TYPECHECK=1 next build",
+    "build:vercel": "cross-env NEXT_DISABLE_ESLINT=1 NEXT_DISABLE_TYPECHECK=1 next build && node scripts/copy-nojekyll.js",
+    "postbuild": "node scripts/copy-nojekyll.js",
     "start": "next start",
     "lint": "next lint",
     "deploy": "vercel --prod"
