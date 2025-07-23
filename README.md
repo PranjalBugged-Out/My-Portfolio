@@ -33,7 +33,8 @@ A modern, minimal, and secure portfolio built with Next.js 14, Tailwind CSS, and
 - [Framer Motion](https://www.framer.com/motion/)
 - [Three.js](https://threejs.org/) & [@react-three/fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction)
 - [Sentry](https://sentry.io/welcome/)
-- [Vercel](https://vercel.com/) (deployment)
+- [Vercel](https://vercel.com/) (primary deployment)
+- [GitHub Pages](https://pages.github.com/) (secondary deployment)
 
 ---
 
@@ -78,6 +79,23 @@ npm run build
 npm start
 ```
 
+### Deployment
+
+#### Vercel (Primary)
+This portfolio is primarily deployed on Vercel for optimal performance with Next.js.
+
+#### GitHub Pages (Secondary)
+The portfolio is also deployed on GitHub Pages as a secondary option:
+
+1. The site is configured for GitHub Pages in `next.config.mjs` with:
+   - `output: 'export'` for static generation
+   - `basePath: '/My-Portfolio'` for proper path handling
+   - `images: { unoptimized: true }` for GitHub Pages compatibility
+
+2. A GitHub Actions workflow automatically deploys changes to GitHub Pages when pushing to the main branch.
+
+3. The deployed site is available at: [https://pranjalbugged-out.github.io/My-Portfolio/](https://pranjalbugged-out.github.io/My-Portfolio/)
+
 ---
 
 ## 🌟 Main Sections
@@ -109,4 +127,4 @@ This project is [MIT](LICENSE) licensed.
 
 ---
 
-> Designed & built by Pranjal Babel. Feel free to fork, star, and connect! 
+> Designed & built by Pranjal Babel. Feel free to fork, star, and connect!
