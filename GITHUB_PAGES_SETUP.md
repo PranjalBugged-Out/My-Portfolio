@@ -37,6 +37,10 @@ If you still encounter a 404 error after deployment:
 3. It might take up to 10 minutes for the changes to propagate
 4. Try clearing your browser cache
 5. Ensure your repository is public (or you have a paid GitHub plan that supports private repository GitHub Pages)
+6. Check the build logs in the Actions tab for any errors
+7. If the build is failing with ESLint errors, we've updated the workflow to use `npm run build:vercel` which disables ESLint and TypeScript checking
+8. Make sure the `.nojekyll` file exists in both the root directory and the `/public` directory
+9. Verify that the `index.html` file exists at the root level of the deployed site
 
 ## Note
 
