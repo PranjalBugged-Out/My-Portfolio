@@ -1,6 +1,7 @@
 "use client";
 
 import { FaLocationArrow } from "react-icons/fa6";
+import Image from "next/image";
 
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
@@ -29,11 +30,17 @@ const RecentProjects = () => {
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                   style={{ backgroundColor: "#13162D" }}
                 >
-                  <img src="/bg.png" alt="bgimg" />
+                  <Image 
+                    src="/bg.png" 
+                    alt="bgimg" 
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-                <img
+                <Image
                   src={item.img}
                   alt="cover"
+                  fill
                   className="z-10 absolute bottom-0 w-full h-full object-cover transition-all duration-500 group-hover:blur-sm"
                 />
               </div>
@@ -62,10 +69,16 @@ const RecentProjects = () => {
                         transform: `translateX(-${5 * index + 2}px)`,
                       }}
                     >
-                      <img src={icon} alt="icon5" className="p-2" />
+                      <Image 
+                        src={icon} 
+                        alt={`icon${index + 1}`} 
+                        width={32} 
+                        height={32} 
+                        className="p-2" 
+                      />
                     </div>
                   ))}
-                  </div>
+                </div>
 
                 <div className="flex justify-center items-center">
                   {item.github ? (
@@ -76,7 +89,13 @@ const RecentProjects = () => {
                       className="flex items-center mr-2 group"
                       title="View on GitHub"
                     >
-                      <img src="/git.svg" alt="GitHub" className="w-7 h-7 opacity-80 hover:opacity-100 transition mr-2" />
+                      <Image 
+                        src="/git.svg" 
+                        alt="GitHub" 
+                        width={28} 
+                        height={28} 
+                        className="opacity-80 hover:opacity-100 transition mr-2" 
+                      />
                       <span className="flex lg:text-xl md:text-xs text-sm text-purple group-hover:underline">Click Here</span>
                       <FaLocationArrow className="ms-3" color="#CBACF9" />
                     </a>

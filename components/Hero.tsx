@@ -1,5 +1,6 @@
 import { FaLocationArrow } from "react-icons/fa6";
 import React, { useRef, useState } from "react";
+import Image from "next/image";
 
 import MagicButton from "./MagicButton";
 import { Spotlight } from "./ui/Spotlight";
@@ -48,11 +49,15 @@ const Hero = () => {
               }}
             ></div>
             {/* Profile image with floating/scale effect */}
-            <img
-              alt="Portrait of Pranjal"
-              className="relative w-full h-full object-cover rounded-full border-4 border-[#a259f7] shadow-2xl animate-bounce-img z-10"
-              src="/profile.jpg"
-            />
+            <div className="relative w-full h-full">
+              <Image
+                alt="Portrait of Pranjal"
+                className="relative object-cover rounded-full border-4 border-[#a259f7] shadow-2xl animate-bounce-img z-10"
+                src="/profile.jpg"
+                fill
+                priority
+              />
+            </div>
           </div>
         </div>
         {/* Right: Text Content */}
@@ -82,14 +87,14 @@ const Hero = () => {
                   rel="noopener noreferrer"
                   className="w-10 h-10 flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
                 >
-                  <img src={info.img} alt="icon" width={20} height={20} />
+                  <Image src={info.img} alt="icon" width={20} height={20} />
                 </a>
               ) : (
                 <div
                   key={info.id}
                   className="w-10 h-10 flex justify-center items-center backdrop-filter backdrop-blur-lg saturate-180 bg-opacity-75 bg-black-200 rounded-lg border border-black-300"
                 >
-                  <img src={info.img} alt="icon" width={20} height={20} />
+                  <Image src={info.img} alt="icon" width={20} height={20} />
                 </div>
               )
             ))}
