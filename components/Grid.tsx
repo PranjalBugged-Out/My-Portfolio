@@ -1,12 +1,12 @@
 import { gridItems } from "@/data";
-import { BentoGrid, BentoGridItem } from "./ui/BentoGrid";
+import BentoGridDynamic, { BentoGridItemDynamic } from "./BentoGridDynamic";
 
 const Grid = () => {
   return (
     <section id="about">
-      <BentoGrid className="w-full py-20">
+      <BentoGridDynamic className="w-full py-20">
         {gridItems.map((item, i) => (
-          <BentoGridItem
+          <BentoGridItemDynamic
             id={item.id}
             key={i}
             title={item.title}
@@ -20,7 +20,7 @@ const Grid = () => {
             spareImg={item.spareImg}
           />
         ))}
-      </BentoGrid>
+      </BentoGridDynamic>
     </section>
   );
 };
