@@ -73,10 +73,23 @@ function createNoJekyllFile() {
     <script>
         // Redirect to the correct path
         window.onload = function() {
-            // Get the base path from the current URL
-            const basePath = window.location.pathname.split('/').slice(0, 2).join('/');
-            // Redirect to the base path
-            window.location.href = basePath || '/My-Portfolio/';
+            // Get the current domain
+            const domain = window.location.hostname;
+            // Check if we're on GitHub Pages
+            if (domain.includes('github.io')) {
+                window.location.href = '/My-Portfolio/';
+            } else {
+                // For other domains, try to determine the base path
+                const pathSegments = window.location.pathname.split('/');
+                // If we have a path with at least 2 segments, use the first segment as base
+                if (pathSegments.length > 2) {
+                    const basePath = '/' + pathSegments[1] + '/';
+                    window.location.href = basePath;
+                } else {
+                    // Default fallback
+                    window.location.href = '/';
+                }
+            }
         }
     </script>
 </head>
@@ -97,7 +110,7 @@ function createNoJekyllFile() {
 function createCNAMEFile() {
   const cnamePath = path.join(OUT_DIR, 'CNAME');
   try {
-    fs.writeFileSync(cnamePath, 'pranjalbugged-out.github.io/My-Portfolio');
+    fs.writeFileSync(cnamePath, 'pranjalbugged-out.github.io');
     console.log('✅ CNAME file created successfully in the out directory');
   } catch (error) {
     console.error('❌ Error creating CNAME file:', error);
