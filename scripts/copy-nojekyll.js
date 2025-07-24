@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 const OUT_DIR = path.join(process.cwd(), 'out');
+const ROOT_DIR = process.cwd();
 
 // Create .nojekyll file in the out directory
 function createNoJekyllFile() {
@@ -117,5 +118,24 @@ function createCNAMEFile() {
   }
 }
 
+// Copy index.html from root to out directory
+function copyIndexHtml() {
+  const sourceIndexPath = path.join(ROOT_DIR, 'index.html');
+  const destIndexPath = path.join(OUT_DIR, 'index.html');
+  
+  try {
+    if (fs.existsSync(sourceIndexPath)) {
+      const indexContent = fs.readFileSync(sourceIndexPath, 'utf8');
+      fs.writeFileSync(destIndexPath, indexContent);
+      console.log('✅ index.html file copied successfully to the out directory');
+    } else {
+      console.error('❌ index.html file not found in the root directory');
+    }
+  } catch (error) {
+    console.error('❌ Error copying index.html file:', error);
+  }
+}
+
 createNoJekyllFile();
 createCNAMEFile();
+copyIndexHtml();

@@ -48,6 +48,39 @@ A modern, minimal, and secure portfolio built with Next.js 14, Tailwind CSS, and
 
 ### Prerequisites
 - Node.js 18+
+
+### Development
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+```
+
+### Deployment
+
+This portfolio is configured for deployment to GitHub Pages. For detailed setup instructions, see [GITHUB_PAGES_SETUP.md](GITHUB_PAGES_SETUP.md).
+
+```bash
+# Build for production
+npm run build
+
+# Check deployment status
+./check-github-deployment.ps1
+```
+
+### Recent Fixes
+
+If you encountered a 404 error on GitHub Pages, the following fixes have been applied:
+
+- Added proper `index.html` files in root and public directories
+- Updated build scripts to ensure files are correctly copied
+- Added deployment verification script
+- Fixed GitHub Actions workflow
+
+For more details, see the [GitHub Pages Setup Guide](GITHUB_PAGES_SETUP.md).
 - npm 9+
 
 ### Installation

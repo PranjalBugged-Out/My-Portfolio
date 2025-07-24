@@ -33,9 +33,14 @@ jobs:
       - name: Build 🔧
         run: npm run build
         
-      - name: Ensure .nojekyll exists
+      - name: Ensure .nojekyll and other files exist
         run: |
           touch ./out/.nojekyll
+          # Make sure index.html is in the root
+          if [ -f "./index.html" ] && [ ! -f "./out/index.html" ]; then
+            cp ./index.html ./out/index.html
+          fi
+          # List files to verify
           ls -la ./out/
 
       - name: Upload artifact
