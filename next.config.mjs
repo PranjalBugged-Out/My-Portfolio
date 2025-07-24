@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     output: process.env.NODE_ENV === 'production' ? 'export' : undefined,
-    // Removed basePath as it's not needed for Netlify deployment
+    // Uncommented basePath for GitHub Pages deployment
+    basePath: process.env.NODE_ENV === 'production' ? '/My-Portfolio' : ''
     images: {
         deviceSizes: [16, 32, 48, 64, 96, 128, 256, 384, 512],
         imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
