@@ -3,7 +3,7 @@ import React from "react";
 const ContactForm = () => {
   return (
     <section className="w-full max-w-5xl mx-auto py-16 px-4">
-      <h2 className="text-4xl font-bold mb-10 text-yellow-400 tracking-wide">Let's connect</h2>
+      <h2 className="text-4xl font-bold mb-10 text-yellow-400 tracking-wide">Let&apos;s connect</h2>
       <div className="flex flex-col md:flex-row gap-8">
         {/* Left: Form */}
         <form className="flex-1 grid grid-cols-1 md:grid-cols-2 gap-6 bg-transparent">
@@ -75,4 +75,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm; 
+export default ContactForm;

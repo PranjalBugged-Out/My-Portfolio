@@ -111,7 +111,7 @@ export const projects = [
     id: 4,
     title: "ProVital Frontend",
     des: "A modern React + TypeScript + Vite frontend for ProVital, featuring fast refresh, ESLint integration, and scalable architecture.",
-    img: "/provital.png", // Please upload a screenshot of https://pro-vital-frontend-git-main-pranjalbugged-outs-projects.vercel.app/ as provital.png in the public folder for best results
+    img: "/provital.png", // Please upload a screenshot of your ProVital Frontend project as provital.png in the public folder for best results
     iconLists: ["/react.svg", "/ts.svg", "/vite.svg", "/css.svg"], // Update these if you have the icons, otherwise keep the current ones
     link: "https://github.com/PranjalBugged-Out/ProVital-Frontend.git",
     github: "https://github.com/PranjalBugged-Out/ProVital-Frontend.git"

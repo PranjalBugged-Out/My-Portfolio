@@ -3,7 +3,7 @@
 ![Next.js](https://img.shields.io/badge/Next.js-14.1.4-blue?logo=nextdotjs)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.3.0-38B2AC?logo=tailwindcss)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?logo=typescript)
-![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)
+![GitHub Pages](https://img.shields.io/badge/Deployed%20on-GitHub%20Pages-222222?logo=github)
 
 ---
 
@@ -32,9 +32,7 @@ A modern, minimal, and secure portfolio built with Next.js 14, Tailwind CSS, and
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [Three.js](https://threejs.org/) & [@react-three/fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction)
-- [Sentry](https://sentry.io/welcome/)
-- [Vercel](https://vercel.com/) (primary deployment)
-- [GitHub Pages](https://pages.github.com/) (secondary deployment)
+- [GitHub Pages](https://pages.github.com/) (deployment)
 
 ---
 
@@ -81,11 +79,8 @@ npm start
 
 ### Deployment
 
-#### Vercel (Primary)
-This portfolio is primarily deployed on Vercel for optimal performance with Next.js.
-
-#### GitHub Pages (Secondary)
-The portfolio is also deployed on GitHub Pages as a secondary option:
+#### GitHub Pages
+The portfolio is deployed on GitHub Pages:
 
 1. The site is configured for GitHub Pages in `next.config.mjs` with:
    - `output: 'export'` for static generation

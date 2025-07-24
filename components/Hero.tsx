@@ -73,7 +73,7 @@ const Hero = () => {
           </p>
           <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
             <button className="mt-12 px-8 py-3 border-2 border-[#a259f7] rounded-lg text-white font-medium hover:bg-[#a259f7] hover:text-gray-900 transition-all duration-300 flex items-center space-x-2 mx-auto md:mx-0 shadow-xl">
-              <span>Let's Connect – Here's My Resume</span>
+              <span>Let&apos;s Connect – Here&apos;s My Resume</span>
             </button>
           </a>
           {/* Social Media Icons */}
