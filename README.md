@@ -91,6 +91,31 @@ The portfolio is deployed on GitHub Pages:
 
 3. The deployed site is available at: [https://pranjalbugged-out.github.io/My-Portfolio/](https://pranjalbugged-out.github.io/My-Portfolio/)
 
+#### Netlify
+The portfolio can also be deployed on Netlify:
+
+1. The site is configured for Netlify in `netlify.toml` with:
+   - Build command: `npm run build`
+   - Publish directory: `out`
+   - Netlify Next.js plugin for optimal compatibility
+
+2. To deploy to Netlify:
+   ```bash
+   # Install Netlify CLI if not already installed
+   npm install -g netlify-cli
+   
+   # Login to Netlify
+   netlify login
+   
+   # Initialize Netlify site (first time only)
+   netlify init
+   
+   # Deploy to Netlify
+   netlify deploy --prod
+   ```
+
+3. Alternatively, you can connect your GitHub repository to Netlify for automatic deployments.
+
 ---
 
 ## 🌟 Main Sections
